@@ -1,0 +1,177 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sec">
+    <div class="container headerCont">
+        <a class="navbar-brand" href="#">
+            <img src="assets/logo2.png" alt="" width="100" height="45">
+          </a>    
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+        <ul class="navbar-nav mb-2 mb-lg-0 headerMenu">
+            <li class="nav-item">
+                <mat-icon>home</mat-icon><a class="nav-link active" aria-current="page" href="/dashboard">Home</a>
+            </li>
+            <li class="nav-item">
+                <mat-icon>people_outline</mat-icon> <a class="nav-link">Matches</a>
+            </li>
+            <li class="nav-item">
+                <mat-icon>mail_outline</mat-icon> <a class="nav-link">MailBox</a>
+            </li>
+            <li class="nav-item">
+                <mat-icon>forum</mat-icon><a class="nav-link">Chat</a>
+              </li>
+            <li class="nav-item">
+                <mat-icon>notifications</mat-icon>
+                <a class="nav-link">Notification</a>
+            </li>
+          </ul>
+        <div class="actions">
+            <button class="btn btn-outline-success" type="submit" (click)="help()">Help</button>
+            <button class="btn btn-outline-success" type="submit" (click)="Logout()">Logout</button>
+        </div>
+            
+      </div>
+    </div>
+  </nav>
+   <!-- Main section -->
+  <div class="mainContainer">
+    <div class="container mainCont"> 
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="leftMenu">
+                    <mat-card>
+                        <mat-card-content>
+                                <img src="assets/avat.jpg">
+                                <p>Good Morning!</p>
+                                <h3 class="b"> {{name}} </h3>
+                                <p>M10394488 </p>
+                                <h3 class="b">Membership : free</h3>
+                                <h4>Become a paid member now</h4>
+                                <div class="actions">
+                                    <button class="btn btn-outline-success" (click)="help()">Upgrade</button>
+                                </div>
+                        </mat-card-content>
+                      </mat-card>
+                </div>
+            </div>
+            <div class="col-sm-9">
+
+                <div *ngIf="!recomendation" class="special actions">
+                    <button class="btn btn-outline-success" (click)="newPage()" type="submit">Daily Recomendation</button>
+                </div>
+                <div *ngIf="recomendation" class="field">
+                    <mat-card>
+                        <mat-card-content><p class="or"> Total - {{TotalRecomendation}}</p></mat-card-content>
+                    </mat-card>
+                    <mat-card>
+                        <mat-card-content><p class="gr"> Interested - {{Accepted}}</p> </mat-card-content>
+                    </mat-card>
+                    <mat-card>
+                        <mat-card-content><p class="re">Rejected - {{Rejected}}</p></mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="rightContent">
+                    <!-- profile list and details code -->
+                    <div *ngIf="!recomendation">
+                        <div *ngIf ="ListView">
+                            <div class="title">
+                                <h3>All Matches</h3>
+                            </div>
+                            <mat-card>
+                                <mat-card-content>
+                                    <div class="sectionContent">
+                                        <ng-container *ngFor ="let items of dataArray;let i = index">
+                                            <div class="profileGroup">
+                                                <div class="item">
+                                                    <img (click)="goToProfileDetails(dataArray[i])" [src]="dataArray[i].picture" title="photo" alt="Matrimony Photo" />
+                                                    <p class="b">{{dataArray[i].name}}</p>
+                                                    <p>{{dataArray[i].age}},{{dataArray[i].location}}</p>
+                                                    <div class="btnSet">
+                                                        <button (click)="goToProfileDetails(dataArray[i])">Yes</button>
+                                                        <button (click)="skipProfile(dataArray[i])">No</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+    
+                        <div *ngIf ="!ListView">
+                            <div class="back">
+                                <mat-icon (click)="back()">arrow_back</mat-icon>
+                                <a (click)="back()">View All</a>
+                            </div>
+                            <mat-card class="pd">
+                                <mat-card-content>
+                                    <div class="detailsSection">
+                                        
+                                            <div class="profileGroup">
+                                                <div class="itemDetail">
+                                                        <img  [src]="detailsarray.picture" title="photo" alt="Matrimony Photo" />
+                                                        <div class="detailItem">
+                                                            <h3 class="b">{{detailsarray.name}}</h3> 
+                                                            <p>BE,Tamil</p>
+                                                            <p>Human Resources</p>
+                                                            <p>{{detailsarray.age}},{{detailsarray.location}}</p>
+                                                            <p>Tamilnadu</p>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                    <!-- End  -->
+                   <!-- Start Recomendation -->
+                    <div *ngIf ="recomendation">
+                        <div class="backside" (click)="back()">
+                            <mat-icon>arrow_back</mat-icon>
+                            <p>Daily Recomendation</p>
+                        </div>
+                        <div class="detailPage">
+                            <mat-card-content *ngIf="!noRecomendation">
+                               
+                                <div  class="detailsSection">
+                                    <ng-container>
+                                        <div class="profileGroup">
+                                            <div class="itemcheck" [@Animator]="animationState"
+                                            (@Animator.done)="resetAnimationState($event)"      
+                                            (swipeleft)='startAnimation("left")' 
+                                            (swiperight)='startAnimation("right")'>
+                                                <img  [src]="currentUser.picture" title="photo" alt="Matrimony Photo" />
+                                                <div class="detailItem">
+                                                    <h4 class="b">{{currentUser.name}}</h4> 
+                                                    <p>23,BE,Tamil,Nadar,chennai</p>
+                                                    <mat-divider></mat-divider>
+                                                    <!-- <p>{{userDataArray[i].age}},{{userDataArray[i].location}}</p> -->
+                                                    <div class="highlight">
+                                                        <mat-icon class="click" (click)="shortList('Shorlisted')" >star_border</mat-icon> <span>
+                                                            shortlist</span>    
+                                                        <p class="b"> Like her ? </p> 
+                                                        <div class="actions">
+                                                            <button (click)="Swipe('left')" class="btn btn-outline-success mr"><mat-icon>close</mat-icon></button>
+                                                            <button  (click)="Swipe('right')" class="btn btn-outline-success mr"><mat-icon>done</mat-icon></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </mat-card-content>
+                        </div> 
+                       
+                        <div *ngIf="noRecomendation">
+                            <h2>"No more recomendation"</h2>
+                        </div>
+                    </div>
+                    <!-- End Recomendation -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>

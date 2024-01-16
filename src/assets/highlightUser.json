@@ -1,0 +1,44 @@
+[
+    {
+      "id": 0,
+      "picture": "assets/1.jpeg",
+      "age": 23,
+      "name": "Revathi",
+      "caste":"nadar",
+      "gender": "female",
+      "Interested": "",
+      "location":"chennai"
+    },
+    {
+      "id": 1,
+      "picture": "assets/2.jpeg",
+      "age": 40,
+      "name": "Aishu",
+      "gender": "female",
+      "caste":"nadar",
+      "Interested": "",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 2,
+      "picture": "assets/3.jpeg",
+      "age": 35,
+      "name": "Moni",
+      "gender": "female",
+      "caste":"maravar",
+      "Interested": "",
+      "location":"chennai"
+    },
+    {
+        "id": 3,
+        "picture": "assets/4.jpeg",
+        "age": 35,
+        "name": "Moni",
+        "gender": "female",
+        "caste":"maravar",
+        "Interested": "",
+        "location":"chennai"
+      }
+
+]

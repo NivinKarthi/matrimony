@@ -1,0 +1,167 @@
+[
+    {
+      "id": 0,
+      "picture": "assets/1.jpeg",
+      "age": 23,
+      "name": "Revathi",
+      "caste":"nadar",
+      "gender": "female",
+      "location":"chennai"
+    },
+    {
+      "id": 1,
+      "picture": "assets/2.jpeg",
+      "age": 40,
+      "name": "Aishu",
+      "gender": "female",
+      "caste":"nadar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 2,
+      "picture": "assets/3.jpeg",
+      "age": 35,
+      "name": "Moni",
+      "gender": "female",
+      "caste":"maravar",
+      "location":"chennai"
+    },
+    {
+      "id": 3,
+      "picture": "assets/4.jpeg",
+      "age": 30,
+      "name": "Gayu",
+      "gender": "female",
+      "caste":"maravar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 4,
+      "picture": "assets/5.jpeg",
+      "age": 37,
+      "name": "Kani",
+      "gender": "female",
+      "caste":"maravar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 5,
+      "picture": "assets/6.jpeg",
+      "age": 21,
+      "name": "Bowi",
+      "gender": "female",
+      "caste":"maravar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 6,
+      "picture": "assets/7.jpeg",
+      "age": 25,
+      "name": "Abinaya",
+      "gender": "female",
+      "caste":"maravar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 7,
+      "picture": "assets/8.jpeg",
+      "age": 21,
+      "name": "cyndia",
+      "gender": "female",
+      "caste":"maravar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 8,
+      "picture": "assets/3.jpeg",
+      "age": 31,
+      "name": "Kanaga",
+      "gender": "female",
+      "caste":"maravar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 9,
+      "picture": "assets/1.jpeg",
+      "age": 37,
+      "name": "Devi",
+      "gender": "male",
+      "caste":"maravar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 10,
+      "picture": "assets/2.jpeg",
+      "age": 34,
+      "name": "raji",
+      "gender": "male",
+      "caste":"nadar",
+      "location":"chennai"
+  
+    },
+    {
+      "id": 11,
+      "picture": "assets/3.jpeg",
+      "age": 37,
+      "name": "preethi",
+      "gender": "female",
+      "location":"chennai"
+    },
+    {
+      "id": 12,
+      "picture": "assets/4.jpeg",
+      "age": 27,
+      "name": "Manuela",
+      "gender": "female",
+      "location":"chennai"
+    },
+    {
+      "id": 13,
+      "picture": "assets/5.jpeg",
+      "age": 23,
+      "name": "Trujillo",
+      "gender": "female",
+      "location":"chennai"
+    },
+    {
+      "id": 14,
+      "picture": "assets/6.jpeg",
+      "age": 31,
+      "name": "Nichole",
+      "gender": "female",
+      "location":"chennai"
+    },
+    {
+      "id": 15,
+      "picture": "assets/7.jpeg",
+      "age": 28,
+      "name": "Vasquez ",
+      "gender": "female",
+      "location":"chennai"
+    },
+    {
+      "id": 16,
+      "picture": "assets/8.jpeg",
+      "age": 22,
+      "name": "Pitts",
+      "gender": "female",
+      "location":"chennai"
+    },
+    {
+      "id": 17,
+      "picture": "assets/1.jpeg",
+      "age": 22,
+      "name": "Pitts",
+      "gender": "female",
+      "location":"chennai"
+    }
+  
+  ]
